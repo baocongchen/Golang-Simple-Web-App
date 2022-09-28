@@ -25,7 +25,7 @@ func AddValues(x, y int) (int, error) {
 func main() {
 	// change to true when in Prod
 	app.InProduction = false
-	session := scs.New()
+	session = scs.New()
 	session.Lifetime = 24 * time.Hour
 	session.Cookie.Persist = true
 	session.Cookie.SameSite = http.SameSiteLaxMode
